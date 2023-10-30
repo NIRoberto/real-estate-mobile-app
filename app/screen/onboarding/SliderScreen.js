@@ -30,38 +30,47 @@ const SliderScreen = () => {
   const navigate = useNavigation();
   return (
     <Screen>
-      <View></View>
-      <FlatList
-        data={onboardSlides}
-        keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) => (
-          <View style={styles.container}>
-            <Image source={item.image} style={styles.image} />
-            <AppText
-              value={item.title}
-              size={30}
-              bold={true}
-              color={colors.tomato}
-            />
-          </View>
-        )}
-      />
-      <View style={styles.paginate}>
-        <Entypo name="dot-single" size={30} color={colors.tomato} />
-        <Entypo name="dot-single" size={30} color="black" />
-        <Entypo name="dot-single" size={30} color="black" />
-      </View>
       <View
         style={{
-          width: "100%",
-          // flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-          gap: 10,
+          height: "100%",
+          borderRightColor: colors.skyBlue,
         }}
       >
-        <AppButton title="Back" onPress={() => navigate.navigate("Hero")} />
-        <AppButton title="Next" onPress={() => navigate.navigate("Login")} />
+        <FlatList
+          data={onboardSlides}
+          keyExtractor={(item) => item.id.toString()}
+          renderItem={({ item }) => (
+            <View style={styles.container}>
+              <Image source={item.image} style={styles.image} />
+              <AppText
+                value={item.title}
+                size={30}
+                bold={true}
+                color={colors.tomato}
+              />
+            </View>
+          )}
+        />
+
+        <View style={styles.paginate}>
+          <Entypo name="dot-single" size={30} color={colors.tomato} />
+          <Entypo name="dot-single" size={30} color="black" />
+          <Entypo name="dot-single" size={30} color="black" />
+        </View>
+        <View
+          style={{
+            // width: "100%",
+            // // flex: 1,
+            // justifyContent: "center",
+            // alignItems: "center",
+            // gap: 10,
+            flex: 0.4,
+            gap: 10,
+          }}
+        >
+          <AppButton title="Back" onPress={() => navigate.navigate("Hero")} />
+          <AppButton title="Next" onPress={() => navigate.navigate("Login")} />
+        </View>
       </View>
     </Screen>
   );
@@ -69,20 +78,30 @@ const SliderScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: "center",
-    justifyContent: "center",
+    // height: "70%",
+    flex: 1,
+    width: "100%",
+    height: "100%",
+    flex: 0.5,
+    height: "100vh",
   },
   image: {
-    width: "100%",
-    height: 400,
-    overflow: "hidden",
-    borderRadius: 20,
+    // overflow: "hidden",
+    height: "100%",
+    // width: "100%",
+    flex: 1,
+    // borderRadius: 20,
   },
   paginate: {
     flexDirection: "row",
-    // flex: 1,
+    flex: 0.2,
     justifyContent: "center",
-    // alignItems: "center",
+    alignItems: "center",
+    borderRightColor: colors.tomato,
+  },
+  title: {
+    flex: 0.4,
+    backgroundColor: "red",
   },
 });
 

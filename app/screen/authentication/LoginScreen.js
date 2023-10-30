@@ -24,8 +24,9 @@ const LoginScreen = () => {
           style={{
             justifyContent: "center",
             alignItems: "center",
-            gap: 10,
-            padding: 20,
+            width: "100%",
+            // backgroundColor: colors.skyBlue,
+            // flex: 1,
           }}
         >
           <Image
@@ -49,7 +50,7 @@ const LoginScreen = () => {
           <AppButton title="Login" />
         </View>
 
-        <View>
+        <View style={styles.other}>
           <AppText
             value="Forgot Password?"
             size={15}
@@ -68,7 +69,7 @@ const LoginScreen = () => {
           </View>
         </View>
 
-        <View>
+        <View styles={styles.login}>
           <View>
             <AppText
               value="Don't have an account?"
@@ -98,15 +99,22 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     height: "100%",
     padding: 20,
+    // backgroundColor: colors.skyBlue,
   },
-
   form: {
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
+    // flex: 1,
     gap: 20,
   },
-
+  login: {
+    // flex: 1,
+  },
+  other: {
+    // flex: 1,
+    padding: 20,
+  },
   social: {
     justifyContent: "center",
     alignItems: "center",

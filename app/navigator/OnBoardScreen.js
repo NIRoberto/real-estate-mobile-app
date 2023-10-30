@@ -8,6 +8,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { colors } from "../config/colors";
 import SignupScreen from "../screen/authentication/SignupScreen";
 import ProfileScreen from "../screen/authentication/ProfileScreen";
+import ProfileUpdateScreen from "../screen/authentication/ProfileUpdateScreen";
 const OnBoardScreen = () => {
   const Stack = createStackNavigator();
 
@@ -57,7 +58,7 @@ const OnBoardScreen = () => {
             title: "Fill Your Profile",
           }}
           name="Profile"
-          component={ProfileScreen}
+          component={ProfileUpdateScreen}
         />
       </Stack.Navigator>
     </>

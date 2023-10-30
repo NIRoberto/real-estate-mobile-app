@@ -8,7 +8,9 @@ import { colors } from "../config/colors";
 const AppInput = ({ icon, ...others }) => {
   return (
     <View style={styles.container}>
-      {icon && <MaterialCommunityIcons name={icon} size={24} color={colors.skyBlue} />}
+      {icon && (
+        <MaterialCommunityIcons name={icon} size={24} color={colors.skyBlue} />
+      )}
       <TextInput style={styles.input} {...others} />
     </View>
   );
@@ -22,9 +24,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#f0fff0",
     padding: 10,
     gap: 10,
-    borderRadius: 30,
-    borderWidth: 1,
-    borderColor: colors.skyBlue,
+    borderRadius: 20,
+    // borderWidth: 1,
+    // borderColor: colors.skyBlue,
   },
   input: {
     flex: 1,

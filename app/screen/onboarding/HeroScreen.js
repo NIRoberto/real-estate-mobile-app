@@ -16,6 +16,7 @@ const HeroScreen = () => {
       <View
         style={{
           borderRadius: 20,
+          height:"70%"
         }}
       >
         <Image
@@ -48,8 +49,10 @@ const HeroScreen = () => {
 
 const styles = StyleSheet.create({
   image: {
-    width: "100%",
-    height: 500,
+    // width: "100%",
+    // height: "70%",
+    flex: 1,
+    backgroundColor: colors.tomato,
     overflow: "hidden",
   },
 });

@@ -13,6 +13,7 @@ import { Formik } from "formik";
 
 const SignupScreen = () => {
   const navigate = useNavigation();
+
   return (
     <Screen>
       <View style={styles.container}>
@@ -42,7 +43,9 @@ const SignupScreen = () => {
         <View style={styles.form}>
           <Formik
             initialValues={{ email: "", names: "", password: "" }}
-            onSubmit={(values) => console.log(values)}
+            onSubmit={(values) => {
+              navigate.navigate("Profile");
+            }}
           >
             {({ handleChange, handleBlur, handleSubmit, values }) => (
               <>
