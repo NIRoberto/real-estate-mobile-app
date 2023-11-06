@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
     gap: 10,
     borderRadius: 20,
     // borderWidth: 1,
+    margin: 10,
     // borderColor: colors.skyBlue,
   },
   input: {

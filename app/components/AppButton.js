@@ -11,7 +11,7 @@ const AppButton = ({ title, ...others }) => {
         backgroundColor: colors.tomato,
         borderRadius: 30,
         justifyContent: "center",
-        padding: 10,
+        padding: 20,
         alignItems: "center",
       }}
     >

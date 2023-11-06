@@ -16,7 +16,7 @@ const HeroScreen = () => {
       <View
         style={{
           borderRadius: 20,
-          height:"70%"
+          height: "75%",
         }}
       >
         <Image
@@ -27,6 +27,7 @@ const HeroScreen = () => {
       <View
         style={{
           width: "100%",
+          gap: 20,
         }}
       >
         <AppText
@@ -41,8 +42,8 @@ const HeroScreen = () => {
           bold={false}
           color="black"
         />
-      </View>
       <AppButton title="Get Started" onPress={handlePress} />
+      </View>
     </Screen>
   );
 };

@@ -8,13 +8,15 @@ import { NavigationContainer } from "@react-navigation/native";
 import Screen from "./app/components/Screen";
 import AuthNavigation from "./app/navigator/AuthNavigation";
 import navigattionTheme from "./app/navigator/navigattionTheme";
+import TabNavigation from "./app/navigator/TabNavigation";
 
 export default function App() {
   return (
     <>
       <NavigationContainer theme={navigattionTheme}>
         {/* <HeroScreen /> */}
-        <OnBoardScreen />
+        {/* <OnBoardScreen /> */}
+        <TabNavigation />
         {/* <AuthNavigation /> */}
         {/* <AppText value="Welcome to EstateVR" size={20} color="black" /> */}
       </NavigationContainer>

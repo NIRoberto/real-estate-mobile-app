@@ -9,7 +9,7 @@ const AppText = ({ value, size, color, bold, ...others }) => {
         fontSize: size,
         color: color,
         textAlign: "center",
-        padding: 10,
+        // padding: 10,
         fontWeight: bold ? "bold" : "normal",
       }}
     >

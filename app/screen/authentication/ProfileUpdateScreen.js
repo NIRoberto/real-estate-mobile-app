@@ -4,9 +4,10 @@ import AppInput from "../../components/AppInput";
 import { colors } from "../../config/colors";
 import AppButton from "../../components/AppButton";
 import AppText from "../../components/typo/AppText";
-// import SelectDropdown from "react-native-select-dropdown";
+import SelectDropdown from "react-native-select-dropdown";
+import AppSelect from "../../components/AppSelect";
 
-const gender = ["Select gender", "Female", "Male"];
+const gender = ["Female", "Male"];
 
 const ProfileUpdateScreen = () => {
   return (
@@ -16,22 +17,19 @@ const ProfileUpdateScreen = () => {
         <AppInput placeholder="Full Name" />
         <AppInput placeholder="Email" />
         <AppInput placeholder="Date of birth" />
-        {/* <SelectDropdown
-          data={gender}
+        <AppSelect
+          items={gender}
+          defaultButtonText={"Select gender"}
           onSelect={(selectedItem, index) => {
             console.log(selectedItem, index);
           }}
           buttonTextAfterSelection={(selectedItem, index) => {
-            // text represented after item is selected
-            // if data array is an array of objects then return selectedItem.property to render after item is selected
             return selectedItem;
           }}
           rowTextForSelection={(item, index) => {
-            // text represented for each item in dropdown
-            // if data array is an array of objects then return item.property to represent item in dropdown
             return item;
           }}
-        /> */}
+        />
         <AppButton title="Save" />
       </View>
     </View>

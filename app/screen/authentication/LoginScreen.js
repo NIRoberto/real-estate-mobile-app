@@ -47,7 +47,13 @@ const LoginScreen = () => {
         <View style={styles.form}>
           <AppInput placeholder="Email" icon="email" />
           <AppInput placeholder="Password" icon="security" />
-          <AppButton title="Login" />
+
+          <AppButton
+            title="Login"
+            onPress={() => {
+              navigate.navigate("Home");
+            }}
+          />
         </View>
 
         <View style={styles.other}>
